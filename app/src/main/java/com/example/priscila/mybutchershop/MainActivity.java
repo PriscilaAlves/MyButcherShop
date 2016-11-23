@@ -1,9 +1,13 @@
 package com.example.priscila.mybutchershop;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,9 +19,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+import static android.R.id.list;
 
-    public String loadJSONFromAsset() {
+public class MainActivity extends Activity {
+
+    /*public String loadJSONFromAsset() {
         String json = null;
         try {
             InputStream is = this.getAssets().open("data.json");
@@ -33,16 +39,16 @@ public class MainActivity extends AppCompatActivity {
         return json;
     }
 
-    ArrayList<String> butcherList = null;
+
     ArrayAdapter<String> myAdapter = null;
-    ListView myButcherListView = null;
+    ListView myButcherListView = null;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        String json_return = loadJSONFromAsset();
+        ListView list;
+        /*String json_return = loadJSONFromAsset();
 
         try {
             JSONObject productsObj = new JSONObject(json_return);
@@ -52,14 +58,35 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
 
-        butcherList = new ArrayList<>();
-        butcherList.addAll(Arrays.asList("Apple", "Banana", "Orange", "Lemon", "Strawberry"));
 
-        myAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, butcherList);
+        String[] butcherList = {"Apple", "Banana", "Orange"};
+        Integer[] imgid={
+                R.drawable.apple,
+                R.drawable.banana,
+                R.drawable.orange
+
+        };
+
+        /*myAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, butcherList);
         myButcherListView = (ListView) findViewById(R.id.listView);
-        myButcherListView.setAdapter(myAdapter);
+        myButcherListView.setAdapter(myAdapter);*/
+        CustomListAdapter adapter=new CustomListAdapter(this, butcherList, imgid);
+        list=(ListView)findViewById(R.id.listView);
+        list.setAdapter(adapter);
+
+        /*list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                // TODO Auto-generated method stub
+                String Slecteditem= itemname[+position];
+                Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
+
+            }
+        });*/
 
     }
 }
