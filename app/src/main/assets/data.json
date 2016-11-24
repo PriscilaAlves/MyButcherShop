@@ -1,7 +1,7 @@
-{"Products":[
+[
   {
     "id": 0,
-    "title": "apple",
+    "title": "Apple",
     "pictureURL": "app/images",
     "description": "I am a very good apple.",
     "price": 14,
@@ -9,10 +9,18 @@
   },
   {
     "id": 1,
-    "title": "orange",
+    "title": "Orange",
     "pictureURL": "app/images",
     "description": "I am a very good orange.",
     "price": 4,
     "country": "Espanha"
+  },
+  {
+    "id": 1,
+    "title": "Banana",
+    "pictureURL": "app/images",
+    "description": "I am a very good banana.",
+    "price": 2,
+    "country": "Espanha"
   }
-]}
+]
