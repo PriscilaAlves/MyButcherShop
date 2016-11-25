@@ -2,7 +2,7 @@
   {
     "id": 0,
     "title": "Apple",
-    "pictureURL": "app/images",
+    "pictureURL": "apple.jpg",
     "description": "I am a very good apple.",
     "price": 14,
     "country": "Portugal"
@@ -10,7 +10,7 @@
   {
     "id": 1,
     "title": "Orange",
-    "pictureURL": "app/images",
+    "pictureURL": "orange.png",
     "description": "I am a very good orange.",
     "price": 4,
     "country": "Espanha"
@@ -18,7 +18,7 @@
   {
     "id": 1,
     "title": "Banana",
-    "pictureURL": "app/images",
+    "pictureURL": "banana.jpg",
     "description": "I am a very good banana.",
     "price": 2,
     "country": "Espanha"

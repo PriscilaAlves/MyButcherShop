@@ -1,9 +1,4 @@
-package Model;
-
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
+package com.example.priscila.mybutchershop.model;
 
 /**
  * Created by anapr on 22/11/2016.
