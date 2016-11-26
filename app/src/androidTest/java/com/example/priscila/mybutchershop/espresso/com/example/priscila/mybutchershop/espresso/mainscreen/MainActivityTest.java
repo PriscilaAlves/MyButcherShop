@@ -35,7 +35,6 @@ import static org.hamcrest.core.AllOf.allOf;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
 
-    private static final String MESSAGE = "This is a test";
     private static final String PACKAGE_NAME = "com.example.priscila.mybutchershop";
 
     @Test
@@ -54,7 +53,7 @@ public class MainActivityTest {
 
     @Test
     public void clickListItem() {
-        String title = "Banana";
+        String title = "Chicken";
         //click on a list item
         onData(hasToString(containsString(title)))
                 .inAdapterView(withId(R.id.listView)).atPosition(0)
