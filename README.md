@@ -1,5 +1,11 @@
 # MyButcherShop
 
+## Install
+Copy myButcherShop.apk to your android smartphone, open it and click on install.
+> Note: In order to install app from apk files, you should go to Settings -> Security -> Device Administration and enable Unknow Sources option.
+
+## Description
+
 This android app will display a list of products. When the user select a product from the list, it will open a new view with detail information of the product, which includes:
 
 * Title
