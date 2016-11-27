@@ -17,6 +17,8 @@ import java.util.List;
 
 /**
  * Created by anapr on 23/11/2016.
+ *
+ * This class implements a custom listview that contains image and text for each row.
  */
 
 public class CustomListAdapter extends ArrayAdapter<Product>{

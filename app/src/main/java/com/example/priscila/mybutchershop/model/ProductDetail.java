@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 /**
  * Created by anapr on 26/11/2016.
+ *
+ * Extension of Product class with detailed product's data.
  */
 
 public class ProductDetail extends Product implements Serializable {

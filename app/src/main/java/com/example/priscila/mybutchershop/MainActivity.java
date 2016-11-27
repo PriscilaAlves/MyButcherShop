@@ -22,17 +22,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Create the adapter to convert the array to views
+        // Create the adapter to convert data in a list
         CustomListAdapter myAdapter = new CustomListAdapter(this, ps.getProductsList());
-
+        //get ListView to display data
         myButcherListView = (ListView) findViewById(R.id.listView);
+        // set data to listview
         myButcherListView.setAdapter(myAdapter);
+        //handle click event on list items
         myButcherListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
+                // send product detail data of selected item to ProductDetailActivity
                 Intent intent = new Intent(MainActivity.this, ProductDetailActivity.class);
                 ProductDetail productSelected = ps.getProductById(view.getId());
                 intent.putExtra("PRODUCT_DETAIL", productSelected);

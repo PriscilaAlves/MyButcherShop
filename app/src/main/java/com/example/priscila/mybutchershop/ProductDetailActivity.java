@@ -18,20 +18,23 @@ public class ProductDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
 
+        // get data sent from Main Activity with product detail info
         ProductDetail productSelected = (ProductDetail) getIntent().getSerializableExtra("PRODUCT_DETAIL");
 
+        //get fields of view to display info
         ImageView picture = (ImageView) findViewById(R.id.imageView3);
         TextView title = (TextView) findViewById(R.id.textView3);
         TextView price = (TextView) findViewById(R.id.textView4);
         TextView country = (TextView) findViewById(R.id.textView6);
         TextView description = (TextView) findViewById(R.id.textView5);
 
+        // set product data to each field in the view
         title.setText(productSelected.getTitle());
         price.setText("Price: "+ productSelected.getPrice().toString() + "€/Kg");
         country.setText("Country of origin: "+ productSelected.getCountry().toString());
         description.setText(productSelected.getDescription().toString());
 
-        // get input stream
+        // get picture file from assets folder
         InputStream ims = null;
         try {
             ims = getAssets().open(productSelected.getPictureURL().toString());

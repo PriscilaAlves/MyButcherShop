@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 /**
  * Created by anapr on 22/11/2016.
+ *
+ * This class represents a model of product's data.
  */
 
 public class Product implements Serializable {
