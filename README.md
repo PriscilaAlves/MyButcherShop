@@ -15,6 +15,7 @@ This android app will display a list of products. When the user select a product
 * Description
 
 This project was developed using Android Studio 2.2.2 for Android 6.0 (Marshmallow).
+
 Dependencies:
 * Gson (https://github.com/google/gson) - used to convert JSON data in a Java Object.
 * Espresso - used to write Android UI tests.
@@ -32,10 +33,12 @@ The project is composed of 6 classes:
   
 ## Tests 
 
-* Unit tests
+#### Unit tests
+
 Unit test was performed on ProductService class and can be find on app/src/test
 
-* UI tests
+#### UI tests
+
 The UI test was performed using Espresso, as recomended by Android developer page.
 The test can be find in app/src/androidTest
 
